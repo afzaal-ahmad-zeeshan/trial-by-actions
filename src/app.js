@@ -1,1 +1,1 @@
-console.log("Server started just fine.");
+console.log("Server started just fine");
