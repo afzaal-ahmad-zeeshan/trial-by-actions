@@ -1,0 +1,20 @@
+on: push
+name: Build Node.js
+jobs:
+  ci:
+    name: Node.js build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+    - uses: actions/checkout@v1
+
+    - name: NPM Setup
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+    
+    - name: Install packages
+    - run: npm update
+
+    - name: Say Hello
+    - run: npm start
